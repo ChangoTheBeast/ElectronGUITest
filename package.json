@@ -1,0 +1,22 @@
+{
+  "name": "electronguitest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChangoTheBeast/ElectronGUITest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChangoTheBeast/ElectronGUITest/issues"
+  },
+  "homepage": "https://github.com/ChangoTheBeast/ElectronGUITest#readme",
+  "devDependencies": {
+    "electron": "^14.0.0"
+  }
+}
