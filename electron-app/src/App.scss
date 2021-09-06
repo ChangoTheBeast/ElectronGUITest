@@ -1,0 +1,88 @@
+@import "colours";
+.App {
+  text-align: center;
+}
+
+.theme {
+  width: 100vw;
+  height: 100vh;
+}
+
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.base {
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
+  width: 100%;
+  min-height: 100vh;
+}
+
+:root {
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+
+  @include themed() {
+    background: t($bg);
+  }
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
+}
+
+.navbar,
+.navbar-brand {
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
+}
+
+.nav-link {
+  margin-top: 7px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+div {
+  .theme,
+  .theme--default {
+    @include themed() {
+      color: t($text) !important;
+      background: t($bg) !important;
+    }
+  }
+}
+
+.h1,
+h1 {
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
+}
+
+.MuiInputBase-input {
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
+}
