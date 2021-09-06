@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-=======
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
 import { React, useEffect, useState } from "react";
@@ -140,7 +118,6 @@ function App() {
           </Router>
         </div>
       </div>
->>>>>>> 561f6c0bbeb2b4d32a4fa01d40d6cf1bff4d1990
     </div>
   );
 }
