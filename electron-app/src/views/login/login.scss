@@ -1,0 +1,64 @@
+@import "../../colours";
+
+.form-control {
+  @include themed() {
+    background-color: t($bg);
+    color: t($text);
+    border: 1px solid t($accent);
+  }
+}
+
+.btn {
+  @include themed() {
+    background-color: t($bg);
+    color: t($text);
+    border-color: t($accent);
+  }
+}
+
+.btn:hover,
+.btn:active {
+  @include themed() {
+    background-color: t($accent);
+    border-color: t($accent);
+  }
+}
+
+.btn:focus {
+  @include themed() {
+    background-color: t($accent);
+    border-color: t($accent);
+    box-shadow: 0 0 0 0.25rem darken($color: t($accent), $amount: 15);
+  }
+}
+
+.form-control:focus-visible {
+  @include themed() {
+    border-color: t($accent);
+  }
+}
+
+.form-control:focus {
+  @include themed() {
+    background-color: t($bg);
+    border-color: t($accent);
+    color: darken($color: t($text), $amount: 10d);
+    box-shadow: 0 0 0 0.25rem darken($color: t($accent), $amount: 15);
+  }
+}
+
+.form-control::placeholder {
+  @include themed() {
+    color: darken($color: t($accent), $amount: 5);
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  @include themed() {
+    -webkit-box-shadow: 0 0 0 30px t($bg) inset !important;
+    -webkit-text-fill-color: t($text) !important;
+  }
+}
