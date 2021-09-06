@@ -1,0 +1,43 @@
+$bg-colour: #362c28;
+$text-colour: #e3f2fd;
+$accent-colour: #e03616;
+
+$bg: "bg";
+$text: "text";
+$accent: "accent";
+
+$themes: (
+  default: (
+    bg: $bg-colour,
+    text: $text-colour,
+    accent: $accent-colour,
+  ),
+  light: (
+    bg: $text-colour,
+    text: $bg-colour,
+    accent: $accent-colour,
+  ),
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}

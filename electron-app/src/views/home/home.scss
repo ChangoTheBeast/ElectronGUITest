@@ -1,0 +1,28 @@
+@import "../../colours";
+
+.container {
+  text-align: center;
+}
+
+.btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.MuiInputBase-root {
+  @include themed() {
+    color: t($text) !important;
+    border-color: t($accent);
+  }
+}
+.MuiSvgIcon-root {
+  @include themed() {
+    fill: t($accent) !important;
+  }
+}
+
+.MuiOutlinedInput-notchedOutline {
+  @include themed() {
+    border-color: darken($color: t($accent), $amount: 10) !important;
+  }
+}
