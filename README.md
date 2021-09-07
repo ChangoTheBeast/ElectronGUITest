@@ -1,1 +1,1 @@
-# StreamStarterFrontEnd
+# StreamStarterFrontend
