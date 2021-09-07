@@ -1,1 +1,1 @@
-# ElectronGUITest
+# StreamStarterFrontEnd
